@@ -1,12 +1,14 @@
 <html>
 	<head>
 		<link href="style.css" rel="stylesheet">
-		<title>Stuart Carruthers CV</title>
+		<title>API example</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	</head>
+</html>
 
+<body>
     ---
-description: Below is an example of an API that I wrote.
+Below is an example of an API that I wrote.
 ---
 
 # API example
@@ -26,7 +28,7 @@ Use the SKU placements resource to view, create, update, and delete the placemen
 
 The SKU placements resource is just one of the resources you need to use when managing a store-picking operation. See [Using APIs to configure In-Store Fulfillment](https://help.abundo.osp.tech/en-us/developer/api/reference/isf/using-isf-apis) to find out more about these resources, and how to use them.
 
-### Understanding SKU placements <a href="#_h5iuc28jpk0c" id="_h5iuc28jpk0c"></a>
+<h3> Understanding SKU placements</h3>
 
 To enable a product to be picked in one of your stores, the store-picking application displays the required SKU to the picker, along with its expected location. This helps to direct pickers to the correct location, and to ensure the most efficient pick walk around the store.
 
@@ -60,3 +62,6 @@ GET /v1/sites/65536661/sku-placements?retailerSkuId=75334667\&pickLocationId=593
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Response                                                                                                                                                                                                                                                                                                                                                                                         |                                                                                                                                                  |
 | <p>Status code: 200</p><p>{</p><p>"metadata": {</p><p>"nextPageToken": "7b5e1d74-aec7-4671-a175-5ba0ae38ed89",</p><p>"pageToken": "7b5e1d74-aec7-4671-a175-5ba0ae38ed89",</p><p>"maxPageSize": 20</p><p>},</p><p>"content": [</p><p>{</p><p>"pickLocationId": "59304427",</p><p>"priority": 1,</p><p>"retailerSkuId": "75334667",</p><p>"skuPlacementId": "30593308"</p><p>}</p><p>]</p><p>}</p> |                                                                                                                                                  |
+
+	</body>
+</html>
