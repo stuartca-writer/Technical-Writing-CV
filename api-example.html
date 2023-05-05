@@ -5,7 +5,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	    <title>Table Example</title>
         <style>
-            table, th, td {
+            table {
+			border-collapse: collapse;
+			}
+			th, td {	
                 border: 0.25px solid rgb(187, 186, 184);
             }
         </style>
@@ -23,18 +26,18 @@ Below is an example of an API that I wrote
 <table>
 	<tr>
 		<th>Version</th>
-		<th>1</th>
+		<td>1</td>
 		<th>Base URL</th>
 		<td>https://api.\[...]  </td>
-		<td>Service account role </td>
+		<th>Service account role </th>
 		<td>WS Store layout </td>
-		<td>Sandbox mocks</td>
+		<th>Sandbox mocks</th>
 		<td>Yes</td>
-		<td>Swagger available</td>
+		<th>Swagger available</th>
 		<td>Download swagger</td>
-		<td>Endpoint reference</td>
+		<th>Endpoint reference</th>
 		<td>SKU Placements resource</td>
-		<td>Status</td>
+		<th>Status</th>
 		<td>Active</td>
 	</tr>
 </table>
