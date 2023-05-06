@@ -90,10 +90,15 @@ pre {
 table {
     border-collapse: collapse;
     }
-    th, td {	
+    th {	
         border: 0.25px solid rgb(187, 186, 184);
         padding: 16px
     }
+
+   td {	
+        border: 0.25px solid rgb(187, 186, 184);
+        padding: 8px
+    }
     thead th {
-      width: 50%;
+      width: 25%;
     }
