@@ -86,3 +86,14 @@ pre {
     color: white;
   }
 }
+
+table {
+    border-collapse: collapse;
+    }
+    th, td {	
+        border: 0.25px solid rgb(187, 186, 184);
+        padding: 8px
+    }
+    thead th {
+      width: 25%;
+    }
