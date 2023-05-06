@@ -92,7 +92,7 @@ table {
     }
     th {	
         border: 0.25px solid rgb(187, 186, 184);
-        padding: 16px
+        padding: 8px
     }
 
    td {	
@@ -100,9 +100,9 @@ table {
         padding: 8px
     }
     thead th {
-      width: 100%;
+      width: 75%;
     }
 
     thead td {
-        width: 100%;
+        width: 25%;
       }
