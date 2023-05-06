@@ -100,9 +100,9 @@ table {
         padding: 8px
     }
     thead th {
-      width: 50%;
+      width: 50px;
     }
 
     thead td {
-        width: 50%;
+        width: 100px;
       }
