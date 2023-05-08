@@ -54,20 +54,40 @@ This file was created as an SVG image map, which allows the creation of 'hotspot
 <a href="assets/create-svg-image-map.docx" target="_blank">docx</a><br><br>
 Internal user instructions for how to create the image map.
 
-<?php
-
-$file = 'path/to/document.docx';
-
-header('Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document');
-header('Content-Disposition: inline; filename="' . basename($file) . '"');
-header('Content-Length: ' . filesize($file));
-
-readfile($file);
-
-?>
-
-<iframe src="assets/create-svg-image-map.docx"></iframe><br><br>
-<iframe src="https://docs.google.com/gview?url=assets/create-svg-image-map.docx&embedded=true"></iframe>
+<script type="text/javascript" src="https://unpkg.com/jszip/dist/jszip.min.js"></script>
+<script src="Scripts/docx-preview.js"></script>
+<script type="text/javascript">
+    function PreviewWordDoc() {
+        //URL of the Word Document.
+        var url = "assets/create-svg-image-map.docx";
+ 
+        //Send a XmlHttpRequest to the URL.
+        var request = new XMLHttpRequest();
+        request.open('GET', url, true);
+        request.responseType = 'blob';
+        request.onload = function () {
+            //Set the ContentType to docx.
+            var contentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+ 
+            //Convert BLOB to File object.
+            var doc = new File([request.response], contentType);
+ 
+            //If Document not NULL, render it.
+            if (doc != null) {
+                //Set the Document options.
+                var docxOptions = Object.assign(docx.defaultOptions, {
+                    useMathMLPolyfill: true
+                });
+                //Reference the Container DIV.
+                var container = document.querySelector("#word-container");
+ 
+                //Render the Word Document.
+                docx.renderAsync(doc, container, null, docxOptions);
+            }
+        };
+        request.send();
+    };
+</script>
 
 <h2> Release note</h2>
 
