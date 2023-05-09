@@ -59,6 +59,91 @@ When you make all the IO configurations and variable settings, execute the follo
 
 <img src="assets/0.png" alt="line"><br><br>
 
+
+<h2> Ocado SASS</h2>
+
+Wriiten in markdown
+
+---
+layout: redirect-url
+redirect-url: user-guides/isf-picking-app/pick-bulky
+title: "Pick bulky items"
+summary: "Learn how to use the picking app to pick bulky items."
+minitoc: "yes"
+icon:
+lang: en-us
+toc: isf
+---
+
+When a customer orders a product which is too large to go into a regular container it's classed as a **bulky item**. For the purposes of picking bulky items are treated as **containers** and are given their own barcode.
+
+{: .note}
+> Bulky items are only suitable for **Customer Collection** and only work if in-store fulfillment is configured to use **SKUs**.
+>
+> Bulky item SKUs must be marked as **Bulky** using OSP's SKU API.
+
+## Manage equipment
+
+Before you can start picking bulky items you need to add a bulky items picking cart.
+
+1. From the **Welcome** screen click &#9776;.
+
+2. Click **Manage equipment**.
+
+3. Click **New bulky items picking cart**.
+
+4. Select an item from the list and click **NEXT**.
+
+5. Scan the picking cart's barcode anc click **NEXT**.
+
+6. Check the summary and click **CONFIRM**.
+
+7. You can now either **ADD MORE** bulky item picking carts or click **DONE**.
+
+## Prepare a bulky items cart
+
+Before you can start picking you first need to prepare the cart:
+
+1. In the Store-pick app, on the Welcome screen, tap **Prepare cart**.
+
+2. Scan the barcode of the bulky items picking cart.
+
+    A confirmation message is displayed.
+
+    {% include image src="store-pick/bulky-prep-cart-msg.png" alt="Bulky cart preparation" width="200" %}
+
+3. Tap **OK** to acknowledge this message and then tap **NEXT** to continue preparing the cart.
+
+## Pick bulky items
+
+{: .note }
+> All temperature regimes are picked at the same time.
+
+Before you start picking bulky items ensure that you have enough printed barcodes for the items you're picking. These can be printed from the [**Store operations dashboard**](../../store-pick/dashboard#pbl).
+
+The picking process is as follows:
+
+1. Scan the product's barcode.
+
+2. Stick the picking barcode on to the product.
+
+3. Scan the picking barcode.
+
+## Out of stock bulky items
+
+If an item is out of stock and the picker marks it as **Missing** you can add the product to the order later if more stock arrives, using the Store Operations web app.
+
+To do this:
+
+1. Go to the [**Pick task details**](../pick-tasks/pick-task-details) page of the product to be picked.
+
+2. Click **ADD ITEM**.
+
+3. Enter the barcode of the product.
+
+4. Enter the barcode of the picking label.
+
+5. Enter the shelf location where you have put the item.
 </body>
 
 </html>
