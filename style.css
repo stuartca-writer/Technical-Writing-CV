@@ -98,5 +98,6 @@ table {
       @media print {
         .noprint {
            visibility: hidden;
+           display: none;
         }
      }
