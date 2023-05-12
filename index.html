@@ -22,6 +22,7 @@
                        const handlePrint = () => {
                           var actContents = document.body.innerHTML;
                           document.body.innerHTML = actContents;
+                          printButton.style.visibility = 'hidden';
                           window.print();
                        }
                     </script>
