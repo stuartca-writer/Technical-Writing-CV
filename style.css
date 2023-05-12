@@ -95,10 +95,8 @@ table {
         margin: 0;
       }
 
-      @media print
-{    
-    .no-print, .no-print *
-    {
-        display: none !important;
-    }
-}
+      @media print {
+        .noprint {
+           visibility: hidden;
+        }
+     }
