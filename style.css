@@ -94,3 +94,11 @@ table {
         padding: 0;
         margin: 0;
       }
+
+      @media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
