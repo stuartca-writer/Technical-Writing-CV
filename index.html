@@ -17,6 +17,15 @@
 		<main>
 			<article id="mainLeft">
 				<section>
+                    <input value='Print' type='button' onclick='handlePrint()' />
+                    <script type="text/javascript">
+                       const handlePrint = () => {
+                          var actContents = document.body.innerHTML;
+                          document.body.innerHTML = actContents;
+                          window.print();
+                       }
+                    </script>
+
 					<h2>Contact</h2>
 					<p>
                         <i class="fa fa-envelope" aria-hidden="true"></i>
