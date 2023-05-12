@@ -17,17 +17,20 @@
 		<main>
 			<article id="mainLeft">
 				<section>
-                    <input value='Print' type='button' onclick='handlePrint()' />
+                    <input id="printpagebutton" type="button" value="Print this page" onclick="printpage()"/>
                     <script type="text/javascript">
-                       const handlePrint = () => {
-                          var actContents = document.body.innerHTML;
-                          document.body.innerHTML = actContents;
-                          printButton.style.visibility = 'hidden';
-                          window.print();
-                       }
+                        function printpage() {
+                            //Get the print button and put it into a variable
+                            var printButton = document.getElementById("printpagebutton");
+                            //Set the print button visibility to 'hidden' 
+                            printButton.style.visibility = 'hidden';
+                            //Print the page content
+                            window.print()
+                            //Set the print button to 'visible' again 
+                            //[Delete this line if you want it to stay hidden after printing]
+                            printButton.style.visibility = 'visible';
+                        }
                     </script>
-
-					<h2>Contact</h2>
 					<p>
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                         <a href="mailto:crruthersstuart@gmail.com">carruthersstuart@gmail.com</a>
