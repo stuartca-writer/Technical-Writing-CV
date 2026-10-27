@@ -1,134 +1,37 @@
-<html>
-	<head>
-		<link rel="shortcut icon" type="image/x-icon" href="profil-head.ico">
-		<link href="style.css" rel="stylesheet">
-		<title>Software writing examples</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	</head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Examples of software user documentation, including step-by-step procedures and SaaS content.">
+  <title>Stuart Carruthers | Software documentation examples</title>
+  <link rel="icon" type="image/svg+xml" href="sc-favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
 <body>
-	<main>
-		<article id="mainLeft">
-			<section>
-				<a href="index.html"><h2>Home</h2></a>
-			</section>
-			
-			<section>
-				<h2>Portfolio</h2>
-				<i class="fa fa-file-code" aria-hidden="true"></i><a href="api-example.html"> API Example</a><br/>
-				<i class="fa fa-keyboard" aria-hidden="true"></i><a href="software-writing-examples.html"> Software writing examples</a><br/>
-				<i class="fa fa-image" aria-hidden="true"></i><a href="animation-examples.html"> Animation examples</a><br/>
-				<i class="fa fa-question" aria-hidden="true"></i><a href="misc-examples.html"> Miscelaneous examples</a><br/>
-				<i class="fa fa-hdd" aria-hidden="true"></i><a href="consumer-hardware.html"> Hardware examples</a><br>
-				<i class="fa fa-file" aria-hidden="true"></i><a href="scripts.html"> Video scripts</a><br>
-				<i class="fa fa-pencil" aria-hidden="true"></i><a href="marketing-copy.html"> Marketing copy</a>
-			</section>
-		</article>
-		<article id="mainRight">				
-
-		<section>
-<h1>Software user manual example</h1>
-
-Below is an example of software documentation that I have written.
-
-<h2> Advantech software</h2>
-
-This is an example of a piece of software used by Advantech customers.
-
-<h3>Software used:</h3>
-Adobe Framemaker<br>
-SnagIt
-<hr>
-
-<h2>Import APAX-5000/6000 Variable</h2>
-
-WebAccess supports the importing of Advantech APAX-5000 and 6000 series variables, including Tag names and Tag addresses, from the KW CSV file to the WebAccess database. It automatically converts the KW variable address to a Modbus address for runtime exchange real-time data.<br><br>
-
-<img src="assets/0.png" alt="line">
-
-<b>Step 1:</b> KW CSV Configuration <br>
-
-When you make all the IO configurations and variable settings, execute the following instructions to export all the variables (Global Variables only):<br><br>
-
-<b>1.</b>Select <b>File</b> and <b>Export</b>: Export the I/O information to the CSV file from the command line. <br><br>
-
-<img src="assets/1.jpeg" alt="image1"><br><br>
-
-<b>2.</b>Select <b>Cross reference</b> from the pop-up dialog box and click <b>OK</b>.<br><br>
-
-<img src="assets/2.jpeg" alt="image2"><br><br>
-
-<b>3.</b>Save <b>CSV file</b>: Keep the default file type-<b>CSV -</b> and specify the file name and path. <br><br>
-
-<img src="assets/3.jpeg" alt="image3"><br><br>
-
-<img src="assets/0.png" alt="line"><br><br>
-
-
-<h2> Ocado SaaS</h2>
-
-Written in markdown and yml.
-
-<table>
-	<thead>
-	<tr>
-		<td>---<br>
-			layout: redirect-url <br>
-			redirect-url: user-guides/isf-picking-app/pick-bulky<br>
-			title: "Pick bulky items"<br>
-			summary: "Learn how to use the picking app to pick bulky items."<br>
-			minitoc: "yes"<br>
-			icon:<br>
-			lang: en-us<br>
-			toc: isf<br>
-			---<br><br>
-			
-			When a customer orders a product which is too large to go into a regular container it's classed as a **bulky item**. For the purposes of picking bulky items are treated as **containers** and are given their own barcode.<br><br>
-			
-			{: .note}<br>
-			> Bulky items are only suitable for **Customer Collection** and only work if in-store fulfillment is configured to use **SKUs**.<br>
-			><br>
-			> Bulky item SKUs must be marked as **Bulky** using OSP's SKU API.<br>
-
-			## Manage equipment<br><br>
-			
-			Before you can start picking bulky items you need to add a bulky items picking cart.<br><br>
-			
-			1. From the **Welcome** screen click &#9776;.<br><br>
-			
-			2. Click **Manage equipment**.<br><br>
-			
-			3. Click **New bulky items picking cart**.<br><br>
-			
-			4. Select an item from the list and click **NEXT**.<br><br>
-			
-			5. Scan the picking cart's barcode anc click **NEXT**.<br><br>
-			
-			6. Check the summary and click **CONFIRM**.<br><br>
-			
-			7. You can now either **ADD MORE** bulky item picking carts or click **DONE**.<br><br>
-			
-			## Pick bulky items<br><br>
-			
-			{: .note }<br>
-			> All temperature regimes are picked at the same time.<br><br>
-			
-			Before you start picking bulky items ensure that you have enough printed barcodes for the items you're picking. These can be printed from the [**Store operations dashboard**](../../store-pick/dashboard#pbl).<br><br>
-			
-			The picking process is as follows:<br><br>
-			
-			1. Scan the product's barcode.<br><br>
-			
-			2. Stick the picking barcode on to the product.<br><br>
-			
-			3. Scan the picking barcode.<br><br>
-			
-		</td>
-	</tr>
-	</thead>
-</table>
-
-
+<header class="hero portfolio-hero"><div class="hero-inner"><div class="hero-copy"><p class="eyebrow">STUART CARRUTHERS · TECHNICAL WRITING PORTFOLIO</p><h1>Software documentation examples</h1><p class="hero-title">Examples of software user documentation, including step-by-step procedures and SaaS content.</p><p class="hero-summary">Clear, useful technical communication across hardware, software, APIs, animation and product content.</p></div><div class="hero-stats"><div class="stat"><strong>20+</strong><span>years of technical writing experience</span></div><div class="stat"><strong>End-to-end</strong><span>research, content design, writing and publishing</span></div></div></div></header>
+<nav class="nav" aria-label="Portfolio navigation"><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> CV Home</a><a href="api-example.html"><i class="fas fa-code" aria-hidden="true"></i> API</a><a href="software-writing-examples.html"><i class="fas fa-keyboard" aria-hidden="true"></i> Software</a><a href="consumer-hardware.html"><i class="fas fa-hdd" aria-hidden="true"></i> Hardware</a><a href="animation-examples.html"><i class="fas fa-play-circle" aria-hidden="true"></i> Animation</a><a href="misc-examples.html"><i class="fas fa-layer-group" aria-hidden="true"></i> Other examples</a><a href="scripts.html"><i class="fas fa-file-alt" aria-hidden="true"></i> Video scripts</a><a href="marketing-copy.html"><i class="fas fa-pen-nib" aria-hidden="true"></i> Marketing</a></nav>
+<main class="portfolio-main">
+<section class="content-section"><div class="section-heading"><p class="eyebrow">INDUSTRIAL SOFTWARE</p><h2>Advantech WebAccess</h2><p>An example of user documentation for software used by Advantech customers.</p></div><div class="content-card"><p class="meta-label">Software used</p><div class="tag-list"><span>Adobe FrameMaker</span><span>Snagit</span></div><hr><h3>Import APAX-5000/6000 variables</h3><p>WebAccess supports importing Advantech APAX-5000 and APAX-6000 series variables, including tag names and tag addresses, from a KW CSV file into the WebAccess database. It automatically converts KW variable addresses to Modbus addresses for real-time data exchange.</p><h3>Step 1 · Configure the KW CSV</h3><p>When the I/O configuration and variable settings are complete, follow these instructions to export all global variables.</p><ol><li>Select <strong>File</strong> and <strong>Export</strong> to export the I/O information to a CSV file.</li><li>Select <strong>Cross reference</strong> in the dialog box and click <strong>OK</strong>.</li><li>Keep the default CSV file type, then specify the file name and path.</li></ol><div class="image-stack"><img class="media-image" src="assets/0.png" alt="Divider graphic from the source documentation"><img class="media-image" src="assets/1.jpeg" alt="Software export command example"><img class="media-image" src="assets/2.jpeg" alt="Cross reference option in the export dialog"><img class="media-image" src="assets/3.jpeg" alt="Saving the exported CSV file"></div></div></section>
+<section class="content-section"><div class="section-heading"><p class="eyebrow">SAAS DOCUMENTATION</p><h2>Ocado SaaS content</h2><p>An example of documentation authored in Markdown and YAML for a picking application.</p></div><div class="content-card"><pre><code>---
+layout: redirect-url
+redirect-url: user-guides/isf-picking-app/pick-bulky
+title: "Pick bulky items"
+summary: "Learn how to use the picking app to pick bulky items."
+minitoc: "yes"
+lang: en-us
+toc: isf
+---</code></pre><p>When a customer orders a product that is too large to fit in a regular container, it is classed as a <strong>bulky item</strong>. For picking, bulky items are treated as containers and are given their own barcode.</p><div class="notice"><strong>Note</strong><p>Bulky items are only suitable for Customer Collection and work only when in-store fulfilment is configured to use SKUs. Bulky item SKUs must be marked as Bulky using the OSP SKU API.</p></div><h3>Manage equipment</h3><p>Before picking bulky items, add a bulky-item picking cart.</p><ol><li>From the Welcome screen, select the menu.</li><li>Select <strong>Manage equipment</strong>.</li><li>Select <strong>New bulky items picking cart</strong>.</li><li>Choose an item from the list and select <strong>Next</strong>.</li><li>Scan the cart barcode and select <strong>Next</strong>.</li><li>Check the summary and select <strong>Confirm</strong>.</li><li>Select <strong>Add more</strong> to add another cart, or select <strong>Done</strong>.</li></ol><h3>Pick bulky items</h3><p>Ensure you have enough printed barcodes before starting. The picking process is:</p><ol><li>Scan the product barcode.</li><li>Attach the picking barcode to the product.</li><li>Scan the picking barcode.</li></ol></div></section>
+<section class="portfolio-strip"><div class="section-heading"><p class="eyebrow">EXPLORE MORE</p><h2>More writing examples</h2><p>Browse other parts of my technical writing portfolio.</p></div><div class="portfolio-grid">
+<a class="portfolio-card" href="api-example.html"><span class="portfolio-icon"><i class="fas fa-code"></i></span><span class="portfolio-content"><strong>API documentation</strong><small>Developer-facing documentation and examples.</small><em>View example →</em></span></a>
+<a class="portfolio-card" href="software-writing-examples.html"><span class="portfolio-icon"><i class="fas fa-keyboard"></i></span><span class="portfolio-content"><strong>Software writing</strong><small>SaaS and software documentation.</small><em>View examples →</em></span></a>
+<a class="portfolio-card" href="consumer-hardware.html"><span class="portfolio-icon"><i class="fas fa-hdd"></i></span><span class="portfolio-content"><strong>Hardware examples</strong><small>User manuals and technical product content.</small><em>View examples →</em></span></a>
+<a class="portfolio-card" href="animation-examples.html"><span class="portfolio-icon"><i class="fas fa-play-circle"></i></span><span class="portfolio-content"><strong>Animation examples</strong><small>Instructional visual content.</small><em>View examples →</em></span></a>
+<a class="portfolio-card" href="scripts.html"><span class="portfolio-icon"><i class="fas fa-file-alt"></i></span><span class="portfolio-content"><strong>Video scripts</strong><small>Storyboard and voice-over content.</small><em>View examples →</em></span></a>
+<a class="portfolio-card" href="marketing-copy.html"><span class="portfolio-icon"><i class="fas fa-pen-nib"></i></span><span class="portfolio-content"><strong>Marketing copy</strong><small>Product messaging and SEO content.</small><em>View examples →</em></span></a>
+</div></section>
+</main>
+<footer><p>Stuart Carruthers · Technical Writer</p><p><a href="index.html">Back to CV</a> · <a href="https://github.com/stuartca-writer/Freelance-Technical-Writing">Freelance writing</a> · <a href="https://github.com/stuartca-writer/Voice_Over">Voice over</a></p></footer>
 </body>
-
 </html>
-
