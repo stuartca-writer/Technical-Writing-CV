@@ -1,171 +1,44 @@
-<html>
-	<head>
-		<link rel="shortcut icon" type="image/x-icon" href="profil-head.ico">
-		<link href="style.css" rel="stylesheet">
-		<title>API example</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-	</head>
-</html>
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A sample of developer-facing documentation for an in-store fulfilment API, including a resource overview, request examples and response structure.">
+  <title>Stuart Carruthers | API documentation example</title>
+  <link rel="icon" type="image/svg+xml" href="sc-favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
 <body>
-	<main>
-		<article id="mainLeft">
-			<section>
-				<a href="index.html"><h2>Home</h2></a>
-			</section>
-			
-			<section>
-				<h2>Portfolio</h2>
-				<i class="fa fa-file-code" aria-hidden="true"></i><a href="api-example.html"> API example</a><br/>
-                    <i class="fa fa-keyboard" aria-hidden="true"></i><a href="software-writing-examples.html"> Software writing examples</a><br/>
-					<i class="fa fa-image" aria-hidden="true"></i><a href="animation-examples.html"> Animation examples</a><br/>
-                    <i class="fa fa-question" aria-hidden="true"></i><a href="misc-examples.html"> Miscelaneous examples</a><br/>
-                    <i class="fa fa-hdd" aria-hidden="true"></i><a href="consumer-hardware.html"> Hardware examples</a><br>
-                    <i class="fa fa-file" aria-hidden="true"></i><a href="scripts.html"> Video scripts</a><br>
-					<i class="fa fa-font" aria-hidden="true"></i><a href="marketing-copy.html"> Marketing copy</a>
-			</section>
-		</article>
-		<article id="mainRight">				
-<section>
-<h1>API example</h1>
-
-<table>
-	<thead>
-	<tr>
-		<th>Version</th>
-		<td>1</td>
-	</tr>
-	</thead>
-	
-	<thead>
-		<tr>
-			<th>Base URL</th>
-			<td>https://api.\[...]  </td>
-		</tr>
-	</thead>
-
-
-	<thead>
-		<tr>
-			<th>Service account role </th>
-			<td>WS Store layout </td>
-		</tr>
-		</thead>
-
-		<thead>
-			<tr>
-				<th>Sandbox mocks</th>
-				<td>Yes</td>
-			</tr>
-		</thead>
-
-			<thead>
-				<tr>
-				<th>Swagger available</th>
-				<td>Download swagger</td>
-				</tr>
-			</thead>
-				
-			<thead>
-				<tr>
-					<th>Endpoint reference</th>
-					<td>SKU Placements resource</td>
-				</tr>
-			</thead>
-
-			<thead>
-				<tr>
-					<th>Status</th>
-					<td>Active</td>
-				</tr>
-			</thead>	
-</table>
-</section>
-
-<h2> SKU Placements resource </h2>
-
-Use the SKU placements resource to view, create, update, and delete the placement of products in one of your stores.
-
-The SKU placements resource is just one of the resources you need to use when managing a store-picking operation. See [Using APIs to configure In-Store Fulfillment](https://help.abundo.osp.tech/en-us/developer/api/reference/isf/using-isf-apis) to find out more about these resources, and how to use them.
-
-<h2> Understanding SKU placements</h2>
-
-To enable a product to be picked in one of your stores, the store-picking application displays the required SKU to the picker, along with its expected location. This helps to direct pickers to the correct location, and to ensure the most efficient pick walk around the store.
-
-This information - where the SKU is expected to be - is called a SKU placement. It is a mapping between a SKU and a [pick location](https://help.abundo.osp.tech/en-us/developer/api/reference/isf/pick-locations/).
-
-Updates that have passed their finalization time will not be reflected in the shipments. Example: If Shipment A has a finalization time of midnight and Shipment B has a finalization time of 15:00, if the user updates locations at 10am the changes will not occur for shipment A, but they will for shipment B.\\
-
-<h2>In-Store Fulfillment resource scenarios</h2>
-
-This page contains some sample API calls and responses that you can make with the In-Store Fulfillment resources, using the sandbox environment.
-
-See the full API reference for the Pick Locations resource
-See the full API reference for the SKU Placements resource
-
-<h2> Scenarios </h2>
-
-Get SKU placements
-
-GET /v1/sites/{retailerSiteId}/sku-placements
-
-<h2>Get SKU placements </h2>
-
-<b>Success</b>
-
-GET /v1/sites/65536661/sku-placements?retailerSkuId=75334667\&pickLocationId=59304427\&maxPageSize=5\&pageToken=7b5e1d74-aec7-4671-a175-5ba0ae38ed89
-
-<h2>Success</h2>
-
-<section>
-	<table>
-		<thead>
-		<tr>
-			<th>GET</th>
-			<td>/v1/sites/65536661/sku-placements?retailerSkuId=75334667\&pickLocationId=59304427\&maxPageSize=5\&pageToken=7b5e1d74-aec7-4671-a175-5ba0ae38ed89</td>
-		</tr>
-		</thead>
-	
-		<thead>
-		<tr>
-		<!--	<td>
-			</td>
-			<th>
-			</th>-->
-		</tr>
-	</thead>
-	
-	<thead>
-	<tr>
-		<th>
-		</th>
-	<td>
-Response                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-<p>Status code: 200</p>
-<code>
-	{<br>
-	"metadata": { <br>
-	"nextPageToken": "7b5e1d74-aec7-4671-a175-5ba0ae38ed89",<br>
-	"pageToken": "7b5e1d74-aec7-4671-a175-5ba0ae38ed89",<br>
-	"maxPageSize": 20<br>
-	<p>},</p>
-	"content": [<br>
-	{<br>
-	"pickLocationId": "59304427",<br>
-	"priority": 1,<br>
-	"retailerSkuId": "75334667",<br>
-	"skuPlacementId": "30593308"<br>
-	}<br>
-	]<br>
-	}<br>                                                                                                                                             
-	</code>
-	</td>
-</tr>
-	</thead>
-</table>
-		
-			</section>
-		</main>
-	</body>
+<header class="hero portfolio-hero"><div class="hero-inner"><div class="hero-copy"><p class="eyebrow">STUART CARRUTHERS · TECHNICAL WRITING PORTFOLIO</p><h1>API documentation example</h1><p class="hero-title">A sample of developer-facing documentation for an in-store fulfilment API, including a resource overview, request examples and response structure.</p><p class="hero-summary">Clear, useful technical communication across hardware, software, APIs, animation and product content.</p></div><div class="hero-stats"><div class="stat"><strong>20+</strong><span>years of technical writing experience</span></div><div class="stat"><strong>End-to-end</strong><span>research, content design, writing and publishing</span></div></div></div></header>
+<nav class="nav" aria-label="Portfolio navigation"><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> CV Home</a><a href="api-example.html"><i class="fas fa-code" aria-hidden="true"></i> API</a><a href="software-writing-examples.html"><i class="fas fa-keyboard" aria-hidden="true"></i> Software</a><a href="consumer-hardware.html"><i class="fas fa-hdd" aria-hidden="true"></i> Hardware</a><a href="animation-examples.html"><i class="fas fa-play-circle" aria-hidden="true"></i> Animation</a><a href="misc-examples.html"><i class="fas fa-layer-group" aria-hidden="true"></i> Other examples</a><a href="scripts.html"><i class="fas fa-file-alt" aria-hidden="true"></i> Video scripts</a><a href="marketing-copy.html"><i class="fas fa-pen-nib" aria-hidden="true"></i> Marketing</a></nav>
+<main class="portfolio-main">
+<section class="content-section"><div class="section-heading"><p class="eyebrow">DEVELOPER DOCUMENTATION</p><h2>SKU Placements resource</h2><p>Use the SKU placements resource to view, create, update and delete the placement of products in one of your stores. A placement maps a SKU to a pick location.</p></div><div class="content-card"><h3>Resource overview</h3><div class="table-scroll"><table><tbody><tr><th>Version</th><td>1</td></tr><tr><th>Base URL</th><td><code>https://api.…</code></td></tr><tr><th>Service account role</th><td>WS Store layout</td></tr><tr><th>Sandbox mocks</th><td>Yes</td></tr><tr><th>Swagger available</th><td>Download Swagger</td></tr><tr><th>Endpoint reference</th><td>SKU Placements resource</td></tr><tr><th>Status</th><td>Active</td></tr></tbody></table></div></div></section>
+<section class="content-section"><div class="section-heading"><p class="eyebrow">CONCEPTS</p><h2>Understanding SKU placements</h2></div><div class="content-card"><p>To enable a product to be picked in one of your stores, the store-picking application displays the required SKU to the picker along with its expected location. This helps direct pickers to the correct location and supports an efficient pick walk around the store.</p><p>This information — where the SKU is expected to be — is called a SKU placement. It is a mapping between a SKU and a <a href="https://help.abundo.osp.tech/en-us/developer/api/reference/isf/pick-locations/">pick location</a>.</p><p><strong>Finalization times:</strong> Updates made after a shipment's finalization time will not be reflected in that shipment. For example, if Shipment A finalizes at midnight and Shipment B at 15:00, a location update made at 10:00 will affect Shipment B but not Shipment A.</p><p>See the API guidance for <a href="https://help.abundo.osp.tech/en-us/developer/api/reference/isf/using-isf-apis">configuring In-Store Fulfilment APIs</a> for more information.</p></div></section>
+<section class="content-section"><div class="section-heading"><p class="eyebrow">REQUESTS & RESPONSES</p><h2>Get SKU placements</h2><p>Example request to retrieve SKU placements for a retail site.</p></div><div class="content-card"><p class="meta-label">Endpoint</p><pre><code>GET /v1/sites/{retailerSiteId}/sku-placements</code></pre><p class="meta-label">Example request</p><pre><code>GET /v1/sites/65536661/sku-placements?retailerSkuId=75334667&amp;pickLocationId=59304427&amp;maxPageSize=5&amp;pageToken=7b5e1d74-aec7-4671-a175-5ba0ae38ed89</code></pre><p class="meta-label">Successful response · HTTP 200</p><pre><code>{
+  "metadata": {
+    "nextPageToken": "7b5e1d74-aec7-4671-a175-5ba0ae38ed89",
+    "pageToken": "7b5e1d74-aec7-4671-a175-5ba0ae38ed89",
+    "maxPageSize": 20
+  },
+  "content": [
+    {
+      "pickLocationId": "59304427",
+      "priority": 1,
+      "retailerSkuId": "75334667",
+      "skuPlacementId": "30593308"
+    }
+  ]
+}</code></pre></div></section>
+<section class="portfolio-strip"><div class="section-heading"><p class="eyebrow">EXPLORE MORE</p><h2>More writing examples</h2><p>Browse other parts of my technical writing portfolio.</p></div><div class="portfolio-grid">
+<a class="portfolio-card" href="api-example.html"><span class="portfolio-icon"><i class="fas fa-code"></i></span><span class="portfolio-content"><strong>API documentation</strong><small>Developer-facing documentation and examples.</small><em>View example →</em></span></a>
+<a class="portfolio-card" href="software-writing-examples.html"><span class="portfolio-icon"><i class="fas fa-keyboard"></i></span><span class="portfolio-content"><strong>Software writing</strong><small>SaaS and software documentation.</small><em>View examples →</em></span></a>
+<a class="portfolio-card" href="consumer-hardware.html"><span class="portfolio-icon"><i class="fas fa-hdd"></i></span><span class="portfolio-content"><strong>Hardware examples</strong><small>User manuals and technical product content.</small><em>View examples →</em></span></a>
+<a class="portfolio-card" href="animation-examples.html"><span class="portfolio-icon"><i class="fas fa-play-circle"></i></span><span class="portfolio-content"><strong>Animation examples</strong><small>Instructional visual content.</small><em>View examples →</em></span></a>
+<a class="portfolio-card" href="scripts.html"><span class="portfolio-icon"><i class="fas fa-file-alt"></i></span><span class="portfolio-content"><strong>Video scripts</strong><small>Storyboard and voice-over content.</small><em>View examples →</em></span></a>
+<a class="portfolio-card" href="marketing-copy.html"><span class="portfolio-icon"><i class="fas fa-pen-nib"></i></span><span class="portfolio-content"><strong>Marketing copy</strong><small>Product messaging and SEO content.</small><em>View examples →</em></span></a>
+</div></section>
+</main>
+<footer><p>Stuart Carruthers · Technical Writer</p><p><a href="index.html">Back to CV</a> · <a href="https://github.com/stuartca-writer/Freelance-Technical-Writing">Freelance writing</a> · <a href="https://github.com/stuartca-writer/Voice_Over">Voice over</a></p></footer>
+</body>
 </html>
